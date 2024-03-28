@@ -24,7 +24,7 @@ pipeline {
             }
  stage('Create a Docker image from the Package Insure-Me.jar file') {
       steps {
-        sh 'docker build -t asifiqbalm/insure-me-app:1.0 .'
+        sh 'docker build -t asifiqbalm/insure-me-app:2.0 .'
                     }
             }
    
@@ -37,7 +37,7 @@ pipeline {
             }
    stage('Push the Docker image') {
       steps {
-        sh 'docker push asifibqalm/insure-me-app:1.0'
+        sh 'docker push asifibqalm/insure-me-app:2.0'
                                 }
             }
    
