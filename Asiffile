@@ -35,7 +35,11 @@ pipeline {
                                                                     }
                                 }
             }
-   
+   stage('Push the Docker image') {
+      steps {
+        sh 'docker push asifibqalm/insure-me-app:1.0'
+                                }
+            }
    
 
     }
