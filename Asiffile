@@ -34,7 +34,7 @@ pipeline {
      sh ' docker login -u ${theuser} -p ${thepass}'
 }
                                                                     }
-                                }
+                                
             }
    stage('Push the Docker image') {
       steps {
