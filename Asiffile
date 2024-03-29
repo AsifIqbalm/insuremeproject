@@ -27,7 +27,8 @@ pipeline {
         sh 'docker build -t asifiqbalm/insure-me-app:2.0 .'
                     }
             }
-
+stage('Login to Dockerhub') {
+      steps {
         withCredentials([usernamePassword(credentialsId: 'dockings', passwordVariable: 'passing', usernameVariable: 'using')]) {
    sh 'docker login -u ${using} -p ${passing}'
 }
