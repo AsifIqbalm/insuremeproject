@@ -4,7 +4,7 @@ pipeline {
       maven 'M2_HOME'
           }
    stages {
-    stage('Git checkout') {
+    stage('Git checkout ') {
       steps {
          echo 'This is for cloning the gitrepo'
          git branch: 'main', url: 'https://github.com/AsifIqbalm/insuremeproject.git'
@@ -43,7 +43,7 @@ stage('Login to Dockerhub') {
                                 }
             }
 
-    stage('Ansbile config and Deployment') {
+    stage('Ansbile config and Deployment ,webhook stage') {
       steps {
       ansiblePlaybook credentialsId: 'ansible-ssh', disableHostKeyChecking: true, installation: 'Ansible', inventory: '/etc/ansible/hosts', playbook: 'ansible.yml', vaultTmpPath: ''
 }
