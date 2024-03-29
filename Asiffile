@@ -28,7 +28,11 @@ pipeline {
                     }
             }
 
-                                                                    
+        withCredentials([usernamePassword(credentialsId: 'dockings', passwordVariable: 'passing', usernameVariable: 'using')]) {
+   sh 'docker login -u ${using} -p ${passing}'
+}
+}
+}
                                 
             
    stage('Push the Docker image') {
