@@ -10,7 +10,7 @@ pipeline {
          git branch: 'main', url: 'https://github.com/AsifIqbalm/insuremeproject.git'
                           }
             }
-    stage('Create a Package') {
+    stage('Create  Package') {
       steps {
          echo 'This will create a package using maven'
          sh 'mvn package'
